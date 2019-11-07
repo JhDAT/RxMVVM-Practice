@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		598942D92373E8DC00139B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942D82373E8DC00139B65 /* AppDelegate.swift */; };
 		598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942DA2373E8DC00139B65 /* SceneDelegate.swift */; };
-		598942DD2373E8DC00139B65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942DC2373E8DC00139B65 /* ViewController.swift */; };
-		598942E02373E8DC00139B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598942DE2373E8DC00139B65 /* Main.storyboard */; };
 		598942E22373E8DF00139B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598942E12373E8DF00139B65 /* Assets.xcassets */; };
 		598942E52373E8DF00139B65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598942E32373E8DF00139B65 /* LaunchScreen.storyboard */; };
 		598942F02373E8E000139B65 /* Rx_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942EF2373E8E000139B65 /* Rx_MVVMTests.swift */; };
@@ -38,8 +36,6 @@
 		598942D52373E8DC00139B65 /* Rx-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598942D82373E8DC00139B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598942DA2373E8DC00139B65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		598942DC2373E8DC00139B65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		598942DF2373E8DC00139B65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598942E12373E8DF00139B65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598942E42373E8DF00139B65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		598942E62373E8DF00139B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,8 +97,6 @@
 			children = (
 				598942D82373E8DC00139B65 /* AppDelegate.swift */,
 				598942DA2373E8DC00139B65 /* SceneDelegate.swift */,
-				598942DC2373E8DC00139B65 /* ViewController.swift */,
-				598942DE2373E8DC00139B65 /* Main.storyboard */,
 				598942E12373E8DF00139B65 /* Assets.xcassets */,
 				598942E32373E8DF00139B65 /* LaunchScreen.storyboard */,
 				598942E62373E8DF00139B65 /* Info.plist */,
@@ -234,7 +228,6 @@
 			files = (
 				598942E52373E8DF00139B65 /* LaunchScreen.storyboard in Resources */,
 				598942E22373E8DF00139B65 /* Assets.xcassets in Resources */,
-				598942E02373E8DC00139B65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598942DD2373E8DC00139B65 /* ViewController.swift in Sources */,
 				598942D92373E8DC00139B65 /* AppDelegate.swift in Sources */,
 				598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		598942DE2373E8DC00139B65 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				598942DF2373E8DC00139B65 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		598942E32373E8DF00139B65 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,7 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 369MWFAK9J;
 				INFOPLIST_FILE = "Rx-MVVM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 369MWFAK9J;
 				INFOPLIST_FILE = "Rx-MVVM/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
