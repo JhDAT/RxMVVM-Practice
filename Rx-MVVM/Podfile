@@ -9,8 +9,10 @@ target 'Rx-MVVM' do
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'RxDataSources', '~> 4.0'
-pod 'RealmSwift'
 pod "RxRealm"
+
+pod 'RealmSwift'
+pod 'SwiftLint'
 
   target 'Rx-MVVMTests' do
     inherit! :search_paths

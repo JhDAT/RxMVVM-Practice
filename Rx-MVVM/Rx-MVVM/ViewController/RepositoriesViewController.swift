@@ -14,6 +14,5 @@ import RxSwift
 final class RepositoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

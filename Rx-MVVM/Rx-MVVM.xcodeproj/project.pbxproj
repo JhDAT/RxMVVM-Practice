@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594E042423810D6800DAB39B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 594E042323810D6800DAB39B /* .swiftlint.yml */; };
 		598942D92373E8DC00139B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942D82373E8DC00139B65 /* AppDelegate.swift */; };
 		598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942DA2373E8DC00139B65 /* SceneDelegate.swift */; };
 		598942E22373E8DF00139B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598942E12373E8DF00139B65 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		035BC1F811A75B86E60DAEE7 /* Pods-Rx-MVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx-MVVMTests.release.xcconfig"; path = "Target Support Files/Pods-Rx-MVVMTests/Pods-Rx-MVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		260D388B99095992582F4B08 /* Pods_Rx_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383AF4F87B5BDB3B996EF848 /* Pods-Rx-MVVM-Rx-MVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx-MVVM-Rx-MVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-Rx-MVVM-Rx-MVVMUITests/Pods-Rx-MVVM-Rx-MVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		594E042323810D6800DAB39B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		598942D52373E8DC00139B65 /* Rx-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598942D82373E8DC00139B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598942DA2373E8DC00139B65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		598942CC2373E8DC00139B65 = {
 			isa = PBXGroup;
 			children = (
+				594E042323810D6800DAB39B /* .swiftlint.yml */,
 				598942D72373E8DC00139B65 /* Rx-MVVM */,
 				598942EE2373E8E000139B65 /* Rx-MVVMTests */,
 				598942F92373E8E000139B65 /* Rx-MVVMUITests */,
@@ -204,6 +207,7 @@
 				598942D22373E8DC00139B65 /* Frameworks */,
 				598942D32373E8DC00139B65 /* Resources */,
 				7FBE83E2737D89B0F7A95F00 /* [CP] Embed Pods Frameworks */,
+				594E04222380FF5300DAB39B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -302,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594E042423810D6800DAB39B /* .swiftlint.yml in Resources */,
 				598942E52373E8DF00139B65 /* LaunchScreen.storyboard in Resources */,
 				598942E22373E8DF00139B65 /* Assets.xcassets in Resources */,
 			);
@@ -367,6 +372,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		594E04222380FF5300DAB39B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		635D91CEDF318377F1C183B5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
