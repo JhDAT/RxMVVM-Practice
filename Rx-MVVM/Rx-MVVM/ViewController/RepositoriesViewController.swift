@@ -12,8 +12,30 @@ import RxCocoa
 import RxSwift
 
 final class RepositoriesViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-    }
+  // MARK: - Property
+  private let tableView: UITableView = {
+    let tableView = UITableView()
+    
+    return tableView
+  }()
+  
+  // MARK: - ViewLifeCycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+  }
+}
+
+// MARK: - setupUI
+extension RepositoriesViewController {
+  private func setupUI() {
+    [tableView].forEach { self.view.addSubview($0) }
+    
+    tableView
+      .topAnchor(equalTo: view)
+      .bottomAnchor(equalTo: view)
+      .leadingAnchor(equalTo: view)
+      .trailingAnchor(equalTo: view)
+      .activeAnchor()
+  }
 }
