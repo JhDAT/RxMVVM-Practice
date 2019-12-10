@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		594E042423810D6800DAB39B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 594E042323810D6800DAB39B /* .swiftlint.yml */; };
+		59527174239DDF9E0082429D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59527173239DDF9E0082429D /* Client.swift */; };
+		59527177239DF1670082429D /* RequestRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59527176239DF1670082429D /* RequestRepositories.swift */; };
+		5952717C239E8C2E0082429D /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952717B239E8C2E0082429D /* Repositories.swift */; };
+		59527180239F2BC70082429D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952717F239F2BC70082429D /* Double.swift */; };
 		598942D92373E8DC00139B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942D82373E8DC00139B65 /* AppDelegate.swift */; };
 		598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942DA2373E8DC00139B65 /* SceneDelegate.swift */; };
 		598942E22373E8DF00139B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598942E12373E8DF00139B65 /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 		260D388B99095992582F4B08 /* Pods_Rx_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383AF4F87B5BDB3B996EF848 /* Pods-Rx-MVVM-Rx-MVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx-MVVM-Rx-MVVMUITests.release.xcconfig"; path = "Target Support Files/Pods-Rx-MVVM-Rx-MVVMUITests/Pods-Rx-MVVM-Rx-MVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		594E042323810D6800DAB39B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		59527173239DDF9E0082429D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		59527176239DF1670082429D /* RequestRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRepositories.swift; sourceTree = "<group>"; };
+		5952717B239E8C2E0082429D /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		5952717F239F2BC70082429D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		598942D52373E8DC00139B65 /* Rx-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598942D82373E8DC00139B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598942DA2373E8DC00139B65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +101,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59527172239DDF8A0082429D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5952717A239E8C250082429D /* Response */,
+				59527175239DE59A0082429D /* Request */,
+				59527173239DDF9E0082429D /* Client.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		59527175239DE59A0082429D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				59527176239DF1670082429D /* RequestRepositories.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		5952717A239E8C250082429D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				5952717B239E8C2E0082429D /* Repositories.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		598942CC2373E8DC00139B65 = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +153,10 @@
 		598942D72373E8DC00139B65 /* Rx-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				598942E62373E8DF00139B65 /* Info.plist */,
+				59527172239DDF8A0082429D /* API */,
 				598942D82373E8DC00139B65 /* AppDelegate.swift */,
 				598942DA2373E8DC00139B65 /* SceneDelegate.swift */,
+				598942E62373E8DF00139B65 /* Info.plist */,
 				598943092373FB8400139B65 /* ViewController */,
 				598943082373FB0E00139B65 /* Resources */,
 				5989430C2373FD7400139B65 /* Extension */,
@@ -168,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				5989430D2373FDA400139B65 /* UIView+LayoutAnchor.swift */,
+				5952717F239F2BC70082429D /* Double.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -473,7 +509,11 @@
 				598942D92373E8DC00139B65 /* AppDelegate.swift in Sources */,
 				5989430E2373FDA400139B65 /* UIView+LayoutAnchor.swift in Sources */,
 				5989430B2373FC3500139B65 /* RepositoriesViewController.swift in Sources */,
+				59527177239DF1670082429D /* RequestRepositories.swift in Sources */,
+				59527174239DDF9E0082429D /* Client.swift in Sources */,
 				598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */,
+				59527180239F2BC70082429D /* Double.swift in Sources */,
+				5952717C239E8C2E0082429D /* Repositories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
