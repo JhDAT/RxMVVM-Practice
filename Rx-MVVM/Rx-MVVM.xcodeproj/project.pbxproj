@@ -12,6 +12,7 @@
 		59527177239DF1670082429D /* RequestRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59527176239DF1670082429D /* RequestRepositories.swift */; };
 		5952717C239E8C2E0082429D /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952717B239E8C2E0082429D /* Repositories.swift */; };
 		59527180239F2BC70082429D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952717F239F2BC70082429D /* Double.swift */; };
+		59527182239F818E0082429D /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59527181239F818E0082429D /* RepositoriesViewModel.swift */; };
 		598942D92373E8DC00139B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942D82373E8DC00139B65 /* AppDelegate.swift */; };
 		598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598942DA2373E8DC00139B65 /* SceneDelegate.swift */; };
 		598942E22373E8DF00139B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598942E12373E8DF00139B65 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		59527176239DF1670082429D /* RequestRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRepositories.swift; sourceTree = "<group>"; };
 		5952717B239E8C2E0082429D /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		5952717F239F2BC70082429D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		59527181239F818E0082429D /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		598942D52373E8DC00139B65 /* Rx-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598942D82373E8DC00139B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		598942DA2373E8DC00139B65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 				59527172239DDF8A0082429D /* API */,
 				598942D82373E8DC00139B65 /* AppDelegate.swift */,
 				598942DA2373E8DC00139B65 /* SceneDelegate.swift */,
-				598942E62373E8DF00139B65 /* Info.plist */,
 				598943092373FB8400139B65 /* ViewController */,
 				598943082373FB0E00139B65 /* Resources */,
 				5989430C2373FD7400139B65 /* Extension */,
@@ -185,6 +186,7 @@
 		598943082373FB0E00139B65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				598942E62373E8DF00139B65 /* Info.plist */,
 				598942E12373E8DF00139B65 /* Assets.xcassets */,
 				598942E32373E8DF00139B65 /* LaunchScreen.storyboard */,
 			);
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				5989430A2373FC3500139B65 /* RepositoriesViewController.swift */,
+				59527181239F818E0082429D /* RepositoriesViewModel.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				5989430E2373FDA400139B65 /* UIView+LayoutAnchor.swift in Sources */,
 				5989430B2373FC3500139B65 /* RepositoriesViewController.swift in Sources */,
 				59527177239DF1670082429D /* RequestRepositories.swift in Sources */,
+				59527182239F818E0082429D /* RepositoriesViewModel.swift in Sources */,
 				59527174239DDF9E0082429D /* Client.swift in Sources */,
 				598942DB2373E8DC00139B65 /* SceneDelegate.swift in Sources */,
 				59527180239F2BC70082429D /* Double.swift in Sources */,
@@ -681,7 +685,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 369MWFAK9J;
-				INFOPLIST_FILE = "Rx-MVVM/Info.plist";
+				INFOPLIST_FILE = "Rx-MVVM/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -700,7 +704,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 369MWFAK9J;
-				INFOPLIST_FILE = "Rx-MVVM/Info.plist";
+				INFOPLIST_FILE = "Rx-MVVM/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
