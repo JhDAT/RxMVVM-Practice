@@ -166,7 +166,7 @@
 			children = (
 				59527183239F824C0082429D /* AppDelegate */,
 				59527172239DDF8A0082429D /* API */,
-				598943092373FB8400139B65 /* ViewController */,
+				598943092373FB8400139B65 /* Repositories */,
 				598943082373FB0E00139B65 /* Resources */,
 				5989430C2373FD7400139B65 /* Extension */,
 			);
@@ -201,13 +201,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		598943092373FB8400139B65 /* ViewController */ = {
+		598943092373FB8400139B65 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				5989430A2373FC3500139B65 /* RepositoriesViewController.swift */,
 				59527181239F818E0082429D /* RepositoriesViewModel.swift */,
 			);
-			path = ViewController;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		5989430C2373FD7400139B65 /* Extension */ = {
