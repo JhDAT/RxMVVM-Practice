@@ -129,6 +129,15 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		59527183239F824C0082429D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				598942D82373E8DC00139B65 /* AppDelegate.swift */,
+				598942DA2373E8DC00139B65 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		598942CC2373E8DC00139B65 = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +164,8 @@
 		598942D72373E8DC00139B65 /* Rx-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				59527183239F824C0082429D /* AppDelegate */,
 				59527172239DDF8A0082429D /* API */,
-				598942D82373E8DC00139B65 /* AppDelegate.swift */,
-				598942DA2373E8DC00139B65 /* SceneDelegate.swift */,
 				598943092373FB8400139B65 /* ViewController */,
 				598943082373FB0E00139B65 /* Resources */,
 				5989430C2373FD7400139B65 /* Extension */,
