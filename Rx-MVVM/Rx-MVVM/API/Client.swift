@@ -22,6 +22,20 @@ final class API {
   struct Request { }
   struct Response { }
   
+  enum LanguageList: String {
+    case swift
+  }
+  
+  enum SortStatus: String {
+    case stars = "stars"
+    case forks = "forks"
+    case helpWantedIssues = "help-wanted-issues"
+    case updated = "updated"
+  }
+  
+  enum Order: String {
+    case desc, asc
+  }
 }
 
 // MARK: - APIError
@@ -39,7 +53,7 @@ extension API {
     return Date.init(timeIntervalSinceNow: 0.0).timeIntervalSince1970 * 1_000_000
   }
   
-  static func getRequest<T: Codable>(_ request: CoreRequest, responseType: T.Type = T.self) -> Observable<T> {
+  static func setAPIRequest<T: Codable>(_ request: CoreRequest, responseType: T.Type) -> Observable<T> {
     let startTime = API.micreSecond
     let urlstring = String(format: "%@%@", baseURL, request.path)
     var compoent = URLComponents(string: urlstring)

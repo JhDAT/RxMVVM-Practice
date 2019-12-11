@@ -11,8 +11,11 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class RepositoriesViewController: UIViewController {
+final class RepositoriesViewController: UIViewController, ViewType {
   // MARK: - Property
+  var viewModel: RepositoriesViewModel!
+  var disposedBag: DisposeBag!
+  
   private let tableView: UITableView = {
     let tableView = UITableView()
     
@@ -28,7 +31,7 @@ final class RepositoriesViewController: UIViewController {
 
 // MARK: - setupUI
 extension RepositoriesViewController {
-  private func setupUI() {
+   func setupUI() {
     [tableView].forEach { self.view.addSubview($0) }
     
     tableView
@@ -38,4 +41,16 @@ extension RepositoriesViewController {
       .trailingAnchor(equalTo: view)
       .activeAnchor()
   }
+  
+  func setupEventBinding() {
+    
+  }
+  
+  func setupUIBinding() {
+    
+  }
+}
+
+extension RepositoriesViewController {
+
 }
