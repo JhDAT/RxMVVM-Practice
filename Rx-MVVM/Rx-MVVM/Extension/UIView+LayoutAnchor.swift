@@ -14,7 +14,7 @@ extension UIView {
     return self
   }
   func bottomAnchor(equalTo view: UIView, constant: CGFloat = 0.0) -> Self {
-    self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: constant).isActive = true
+    self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -constant).isActive = true
     return self
   }
   func leadingAnchor(equalTo view: UIView, constant: CGFloat = 0.0) -> Self {
@@ -22,7 +22,7 @@ extension UIView {
     return self
   }
   func trailingAnchor(equalTo view: UIView, constant: CGFloat = 0.0) -> Self {
-    self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: constant).isActive = true
+    self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant).isActive = true
     return self
   }
   func topAnchor(equalTo anchor: NSLayoutYAxisAnchor, constant: CGFloat = 0.0) -> Self {
@@ -30,7 +30,7 @@ extension UIView {
     return self
   }
   func bottomAnchor(equalTo anchor: NSLayoutYAxisAnchor, constant: CGFloat = 0.0) -> Self {
-    self.bottomAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    self.bottomAnchor.constraint(equalTo: anchor, constant: -constant).isActive = true
     return self
   }
   func leadingAnchor(equalTo anchor: NSLayoutXAxisAnchor, constant: CGFloat = 0.0) -> Self {
@@ -38,7 +38,20 @@ extension UIView {
     return self
   }
   func trailingAnchor(equalTo anchor: NSLayoutXAxisAnchor, constant: CGFloat = 0.0) -> Self {
-    self.trailingAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+    self.trailingAnchor.constraint(equalTo: anchor, constant: -constant).isActive = true
+    return self
+  }
+  func widthAnchor(qeualToConstant: CGFloat) -> Self {
+    self.widthAnchor.constraint(equalToConstant: qeualToConstant).isActive = true
+    return self
+  }
+  func heightAnchor(equalTConstant: CGFloat) -> Self {
+    self.heightAnchor.constraint(equalToConstant: equalTConstant).isActive = true
+    return self
+  }
+  func sizeAnchor(size : CGSize) -> Self {
+    self.widthAnchor.constraint(equalToConstant: size.width).isActive = true
+    self.heightAnchor.constraint(equalToConstant: size.height).isActive = true
     return self
   }
   func activeAnchor() {

@@ -9,6 +9,7 @@
 import UIKit
 
 import RxCocoa
+import RxDataSources
 import RxSwift
 
 final class RepositoriesViewController: UIViewController, ViewType {
@@ -16,22 +17,27 @@ final class RepositoriesViewController: UIViewController, ViewType {
   var viewModel: RepositoriesViewModel!
   var disposedBag: DisposeBag!
   
-  private let tableView: UITableView = {
+  private lazy var tableView: UITableView = {
     let tableView = UITableView()
-    
+    tableView.register(RepositoriesTableViewCell.self, forCellReuseIdentifier: "RepositoriesTableViewCell")
+    tableView.rowHeight = UITableView.automaticDimension
     return tableView
   }()
   
-  // MARK: - ViewLifeCycle
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
+  let dataSource = RxTableViewSectionedAnimatedDataSource<RepositoriesViewModel.RepositoriesItemModel>(
+    configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+      let describingCell = String(describing: RepositoriesTableViewCell.self)
+      let dequcell = tableView.dequeueReusableCell(withIdentifier: describingCell, for: indexPath)
+      guard let cell = dequcell as? RepositoriesTableViewCell else { return UITableViewCell() }
+      cell.configuration(item: item)
+      return cell
   }
+  )
 }
 
 // MARK: - setupUI
 extension RepositoriesViewController {
-   func setupUI() {
+  func setupUI() {
     [tableView].forEach { self.view.addSubview($0) }
     
     tableView
@@ -47,10 +53,9 @@ extension RepositoriesViewController {
   }
   
   func setupUIBinding() {
-    
+    let output = viewModel.transform()
+    output.repositoriesList
+      .drive(tableView.rx.items(dataSource: dataSource))
+      .disposed(by: disposedBag)
   }
-}
-
-extension RepositoriesViewController {
-
 }

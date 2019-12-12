@@ -13,8 +13,8 @@ import RxDataSources
 
 struct RepositoriesViewModel {
   typealias Repositories = API.Response.Repositories
-  typealias RepositoriesItemModel = SectionModel<String, API.Response.Repositories.Items>
-  private var request = API.Request.Repositories(language: .swift, sort: .stars, order: .desc)
+  typealias RepositoriesItemModel = AnimatableSectionModel<String, API.Response.Repositories.Items>
+  private var request = API.Request.Repositories(language: .swift, sort: nil, order: .desc)
   
   private let errorOB = PublishSubject<Error>()
   

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxDataSources
 
 extension API.Response {
   struct Repositories: Codable {
@@ -29,24 +30,34 @@ extension API.Response.Repositories {
 }
 
 extension API.Response.Repositories {
-  struct Items: Codable {
+  struct Items: Codable, Equatable {
     private let nodeId: String?
     private let name: String?
     private let fullName: String?
     private let isPrivate: Bool?
+    private let description: String?
+    private let forks: Int?
     
     public let idValue: Int?
     public var nodeIdValue: String { return self.nodeId ?? "" }
     public var nameValue: String { return self.name ?? "" }
     public var fullNameValue: String { return self.fullName ?? "" }
     public var isPrivateValue: Bool { return self.isPrivate ?? false }
+    public var descriptionValue: String { return self.description ?? "" }
+    public var forksValue: Int { return self.forks ?? 0 }
+  }
+}
+
+extension API.Response.Repositories.Items: IdentifiableType {
+  var identity: Int {
+    return self.idValue ?? 0
   }
 }
 
 extension API.Response.Repositories.Items {
   enum CodingKeys: String, CodingKey {
     case idValue = "id"
-    case name
+    case name, description, forks
     case nodeId = "node_id"
     case fullName = "full_name"
     case isPrivate = "private"
