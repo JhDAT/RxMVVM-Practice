@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
   func topAnchor(equalTo view: UIView, constant: CGFloat = 0.0) -> Self {
-    self.topAnchor.constraint(equalTo: view.topAnchor, constant: constant).isActive = true
+    self.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: constant).isActive = true
     return self
   }
   func bottomAnchor(equalTo view: UIView, constant: CGFloat = 0.0) -> Self {

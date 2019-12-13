@@ -13,11 +13,14 @@ extension API.Response {
   struct Repositories: Codable {
     private let totalCount: Int?
     private let incompleteResults: Bool?
-    private let items: [Items]?
+    private var items: [Items]?
     
     public var totalCountValue: Int { return self.totalCount ?? 0 }
     public var incompleteResultsValue: Bool { return self.incompleteResults ?? false }
-    public var itemsValue: [Items] { return self.items ?? [] }
+    public var itemsValue: [Items] {
+      get { return self.items ?? [] }
+      set (newValue) { return self.items = newValue }
+    }
   }
 }
 
